@@ -1,0 +1,43 @@
+БД - Это хранения структурированных данных
+
+СУБД - это система управления БД
+
+SQL / NoSQL - sql бд отличия в том что имеет отношения между таблицами(объектами) NoSQL - не имеет отношения
+
+CREATE DATABASE name_database;
+CREATE DATABASE name_database WITH OWNER role_name;
+
+CREATE ROLE name_role WITH (extensions);
+
+DROP DATABASE name_database;
+DROP ROLE role_name;
+\c DATABASE_NAME --> connection
+
+\d команда которая показывает какие таблицы есть 
+\dt
+
+\d table_name ---> shows structure table 
+CREATE TABLE name_table(
+    name_field type_field constrain(blank)
+)
+
+INSERT INTO name_table() (name_field, ...)
+values('write_data', ...);
+
+SELECT fields(* | all) FROM table_name;
+
+SELECT field from table_name where name_field = 'soie';
+
+select*from table where field = 'some1' and field2 = 'some2'
+
+select*from table where field = 'some' or field = 'some2';
+
+select*from table limit int; first_limit_obj;
+
+select*from table OFFSET int;
+
+select * from table OFFSET int LIMIT int;
+
+select * from table where field in('some1','some2');
+
+
