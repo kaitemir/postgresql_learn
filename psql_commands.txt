@@ -41,3 +41,34 @@ select * from table OFFSET int LIMIT int;
 select * from table where field in('some1','some2');
 
 
+aggregate function
+
+AVG,COUNT, SUM, MAX, MIN
+
+select*from employee;
+select avg(field) from table_name; (SUM,MAX,MIN)
+
+select count(*), field_name1 from table_name group by field_name1;
+select count(*) field_name1 from table_name group by field_name1 HAVING COUNT(*) > INT;
+select*from table where not field = 'some';
+select*from table where field !=(<>) 'some;
+select*from table where field is null;
+select field1 as new_field1 from table;
+select*from table order by field(default=ASC) DESC
+select*from table where field between 'some1' and 'some2' limit 2;
+select*from table where field between LIKE '%some1' and ILIKE '%some2%' limit 2;
+select distinct field from table OFFSET 4; -> return unique
+update table set field = 'new_value' where id = 1;
+
+
+
+
+class Employee(models.Model):
+
+    id = models.PrimaryKey()
+    name = models.CharField(max_length=50)
+    last_name = models.CharField(max max_length23)
+
+    object = ManagerQuery
+
+employee.objects.all()
